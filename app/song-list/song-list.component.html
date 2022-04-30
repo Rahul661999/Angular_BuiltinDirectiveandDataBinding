@@ -1,0 +1,20 @@
+<!-- <p>song-list works!</p> -->
+
+<h1 id="setColor">FED Assignment1: Built in Directives and Data Binding</h1>
+<hr>
+<h2 *ngIf="showData">Number of songs in my playlist : {{songsList.length}}</h2>
+
+<button type="button" (click)="toggleData()">Toggle Number of Songs</button>
+
+<h3>My Playlist</h3>
+
+<div>
+    <ul *ngFor = "let song of songsList">
+        <li> {{song.name}} </li>
+    </ul>
+</div>
+
+
+<label for="song">Enter new song:</label>
+<input type="text" id="song" [(ngModel)]="textName" placeholder="newsong">
+<button type="button" value="Add Song"  (click)="addData()">Add Song</button>
